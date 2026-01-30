@@ -1,0 +1,18 @@
+<nav>
+  <div class="container">
+    <a href="{{ .Site.Home.RelPermalink }}" class="nav-logo">MING<span>TUO</span> <small class="nav-logo-cn">铭拓</small></a>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+      <li class="lang-switcher">
+        {{ range .Site.Languages }}
+        <a href="/{{ if ne .Lang "ru" }}{{ .Lang }}/{{ end }}" class="lang-link{{ if eq .Lang $.Site.Language.Lang }} lang-active{{ end }}">{{ .LanguageName }}</a>
+        {{ end }}
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ i18n "catalog_title" }}</h1>
+    <p>{{ i18n "catalog_subtitle" }}</p>
+    <div class="section-line"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="product-grid">
+      {{ partial "products.html" . }}
+    </div>
+  </div>
+</section>
+{{ end }}

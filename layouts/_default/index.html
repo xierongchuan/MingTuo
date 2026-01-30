@@ -1,0 +1,77 @@
+{{ define "main" }}
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">{{ i18n "hero_badge" }}</div>
+      <h1>{{ i18n "hero_title_1" }} <span class="highlight">{{ i18n "hero_title_highlight" }}</span> {{ i18n "hero_title_2" }}</h1>
+      <p>{{ i18n "hero_desc" }}</p>
+      <div class="hero-buttons">
+        <a href="{{ "catalog/" | relLangURL }}" class="btn btn-primary">{{ i18n "btn_catalog" }}</a>
+        <a href="{{ "contacts/" | relLangURL }}" class="btn btn-outline">{{ i18n "btn_contact" }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-number">14+</div><div class="stat-label">{{ i18n "stat_years" }}</div></div>
+      <div class="stat-item"><div class="stat-number">5000+</div><div class="stat-label">{{ i18n "stat_products" }}</div></div>
+      <div class="stat-item"><div class="stat-number">3000+</div><div class="stat-label">{{ i18n "stat_clients" }}</div></div>
+      <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">{{ i18n "stat_brands" }}</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Advantages -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ i18n "why_us" }}</h2>
+      <p>{{ i18n "why_us_desc" }}</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="advantages-grid">
+      <div class="advantage-card animate-up"><span class="advantage-icon">&#9989;</span><h3>{{ i18n "adv_brands" }}</h3><p>{{ i18n "adv_brands_desc" }}</p></div>
+      <div class="advantage-card animate-up"><span class="advantage-icon">&#128666;</span><h3>{{ i18n "adv_delivery" }}</h3><p>{{ i18n "adv_delivery_desc" }}</p></div>
+      <div class="advantage-card animate-up"><span class="advantage-icon">&#128176;</span><h3>{{ i18n "adv_prices" }}</h3><p>{{ i18n "adv_prices_desc" }}</p></div>
+      <div class="advantage-card animate-up"><span class="advantage-icon">&#128187;</span><h3>{{ i18n "adv_consult" }}</h3><p>{{ i18n "adv_consult_desc" }}</p></div>
+      <div class="advantage-card animate-up"><span class="advantage-icon">&#128274;</span><h3>{{ i18n "adv_guarantee" }}</h3><p>{{ i18n "adv_guarantee_desc" }}</p></div>
+      <div class="advantage-card animate-up"><span class="advantage-icon">&#128197;</span><h3>{{ i18n "adv_schedule" }}</h3><p>{{ i18n "adv_schedule_desc" }}</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Products -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ i18n "popular" }}</h2>
+      <p>{{ i18n "popular_desc" }}</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="product-grid">
+      {{ partial "products.html" . }}
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="{{ "catalog/" | relLangURL }}" class="btn btn-primary">{{ i18n "all_catalog" }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Brands -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ i18n "our_brands" }}</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="brands-row">
+      <span>BOSCH</span><span>MAKITA</span><span>DeWALT</span><span>KNAUF</span><span>HILTI</span><span>STANLEY</span><span>WEBER</span>
+    </div>
+  </div>
+</section>
+{{ end }}

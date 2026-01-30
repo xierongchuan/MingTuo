@@ -1,0 +1,95 @@
+baseURL = "/"
+theme = []
+defaultContentLanguage = "ru"
+
+[params]
+  companyName = "MINGTUO"
+  companyNameCN = "铭拓"
+  phone = "+998 (71) 200-30-40"
+  phoneMobile = "+998 (90) 123-45-67"
+  email = "info@mingtuo.uz"
+  telegram = "mingtuo_uz"
+
+# ========================
+# LANGUAGES
+# ========================
+
+[languages]
+
+  [languages.ru]
+    languageCode = "ru"
+    languageName = "Русский"
+    weight = 1
+    title = "MINGTUO — строительные инструменты и материалы"
+    [languages.ru.params]
+      tagline = "Качественные строительные инструменты и материалы"
+      address = "г. Ташкент, Чиланзарский район, ул. Бунёдкор, 1"
+      workingHours = "Пн-Пт: 9:00–18:00, Сб: 10:00–15:00"
+    [[languages.ru.menus.main]]
+      name = "Главная"
+      url = "/"
+      weight = 1
+    [[languages.ru.menus.main]]
+      name = "Каталог"
+      url = "/catalog/"
+      weight = 2
+    [[languages.ru.menus.main]]
+      name = "О компании"
+      url = "/about/"
+      weight = 3
+    [[languages.ru.menus.main]]
+      name = "Контакты"
+      url = "/contacts/"
+      weight = 4
+
+  [languages.uz]
+    languageCode = "uz"
+    languageName = "O'zbekcha"
+    weight = 2
+    title = "MINGTUO — qurilish asboblari va materiallari"
+    [languages.uz.params]
+      tagline = "Sifatli qurilish asboblari va materiallari"
+      address = "Toshkent sh., Chilonzor tumani, Bunyodkor ko'chasi, 1"
+      workingHours = "Du-Ju: 9:00–18:00, Sha: 10:00–15:00"
+    [[languages.uz.menus.main]]
+      name = "Bosh sahifa"
+      url = "/uz/"
+      weight = 1
+    [[languages.uz.menus.main]]
+      name = "Katalog"
+      url = "/uz/catalog/"
+      weight = 2
+    [[languages.uz.menus.main]]
+      name = "Kompaniya haqida"
+      url = "/uz/about/"
+      weight = 3
+    [[languages.uz.menus.main]]
+      name = "Kontaktlar"
+      url = "/uz/contacts/"
+      weight = 4
+
+  [languages.zh]
+    languageCode = "zh"
+    languageName = "中文"
+    weight = 3
+    title = "铭拓 — 建筑工具与材料"
+    [languages.zh.params]
+      tagline = "优质建筑工具与材料"
+      address = "塔什干市，奇兰扎尔区，布尼奥德科尔街1号"
+      workingHours = "周一至周五: 9:00–18:00, 周六: 10:00–15:00"
+    [[languages.zh.menus.main]]
+      name = "首页"
+      url = "/zh/"
+      weight = 1
+    [[languages.zh.menus.main]]
+      name = "产品目录"
+      url = "/zh/catalog/"
+      weight = 2
+    [[languages.zh.menus.main]]
+      name = "关于我们"
+      url = "/zh/about/"
+      weight = 3
+    [[languages.zh.menus.main]]
+      name = "联系我们"
+      url = "/zh/contacts/"
+      weight = 4

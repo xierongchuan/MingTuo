@@ -1,0 +1,21 @@
+{{- $lang := .Site.Language.Lang -}}
+{{- $data := .Site.Data.products -}}
+{{- if eq $lang "uz" }}{{ $data = .Site.Data.products_uz }}{{ end -}}
+{{- if eq $lang "zh" }}{{ $data = .Site.Data.products_zh }}{{ end -}}
+{{ range $data }}
+<div class="product-card animate-up">
+  <div class="product-image">
+    {{ if .image }}<img src="/images/{{ .image }}" alt="{{ .name }}">{{ else }}&#128295;{{ end }}
+    {{ if .badge }}<span class="product-badge">{{ .badge }}</span>{{ end }}
+  </div>
+  <div class="product-body">
+    <div class="product-category">{{ .category }}</div>
+    <h3>{{ .name }}</h3>
+    <p class="product-desc">{{ .description }}</p>
+    <div class="product-footer">
+      <span class="product-price">{{ .price }}</span>
+      <a href="tel:{{ $.Site.Params.phone }}" class="product-btn">&#128222; {{ $.Site.Params.phone }}</a>
+    </div>
+  </div>
+</div>
+{{ end }}

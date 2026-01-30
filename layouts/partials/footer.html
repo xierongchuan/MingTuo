@@ -1,0 +1,47 @@
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <h2>{{ i18n "cta_title" }}</h2>
+    <p>{{ i18n "cta_desc" }}</p>
+    <a href="tel:{{ .Site.Params.phone }}" class="cta-phone">{{ .Site.Params.phone }}</a>
+    <a href="{{ "contacts/" | relLangURL }}" class="btn btn-primary">{{ i18n "btn_contact" }}</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo">MING<span>TUO</span> <small class="nav-logo-cn">铭拓</small></span>
+        <p>{{ i18n "footer_desc" }}</p>
+      </div>
+      <div>
+        <h4>{{ i18n "nav_label" }}</h4>
+        <ul class="footer-links">
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div>
+        <h4>{{ i18n "contacts_label" }}</h4>
+        <ul class="footer-links">
+          <li><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></li>
+          <li><a href="tel:{{ .Site.Params.phoneMobile }}">{{ .Site.Params.phoneMobile }}</a></li>
+          <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>{{ i18n "address_label" }}</h4>
+        <ul class="footer-links">
+          <li>{{ .Site.Language.Params.address }}</li>
+          <li>{{ .Site.Language.Params.workingHours }}</li>
+          {{ with .Site.Params.telegram }}<li><a href="https://t.me/{{ . }}">Telegram</a></li>{{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; {{ now.Year }} {{ .Site.Params.companyName }}. {{ i18n "copyright" }}
+    </div>
+  </div>
+</footer>

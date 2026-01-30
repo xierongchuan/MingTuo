@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ i18n "about_title" }}</h1>
+    <p>{{ i18n "about_subtitle" }}</p>
+    <div class="section-line"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="about-intro">
+      <div class="about-text">
+        <h2>{{ i18n "about_h2" }}</h2>
+        <p>{{ i18n "about_p1" }}</p>
+        <p>{{ i18n "about_p2" }}</p>
+        <p>{{ i18n "about_p3" }}</p>
+      </div>
+      <div class="about-visual">&#127959;</div>
+    </div>
+
+    <div class="section-header">
+      <h2>{{ i18n "values" }}</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-item"><span class="value-icon">&#9989;</span><div><h4>{{ i18n "val_quality" }}</h4><p>{{ i18n "val_quality_desc" }}</p></div></div>
+      <div class="value-item"><span class="value-icon">&#129309;</span><div><h4>{{ i18n "val_trust" }}</h4><p>{{ i18n "val_trust_desc" }}</p></div></div>
+      <div class="value-item"><span class="value-icon">&#128161;</span><div><h4>{{ i18n "val_expertise" }}</h4><p>{{ i18n "val_expertise_desc" }}</p></div></div>
+      <div class="value-item"><span class="value-icon">&#128640;</span><div><h4>{{ i18n "val_speed" }}</h4><p>{{ i18n "val_speed_desc" }}</p></div></div>
+    </div>
+  </div>
+</section>
+{{ end }}
